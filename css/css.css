@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("../images/background-1.jpg");
+    animation: bg 12s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1200px 0;
+    }
+}
+
+.rock {
+    width: 110px;
+    height: 110px;
+}
+
+.rock img {
+    width: 100%;
+    height: auto;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.enemy {
+    height: 100px;
+    overflow: hidden;
+    width: 110px;
+}
+
+.enemy img {
+    height: 200px;
+    width: 300%;
+}

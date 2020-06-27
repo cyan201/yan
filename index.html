@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="pos-middle container">
+    <div class="pos-middle instruction ">
+        <img src="images/logo-01.png" alt="" class="logo logo-first">
+        <h2>How to Play Star Battle.</h2>
+        <p>1. Move the spaceship using the sensible areas in the screen;</p>
+        <p>2. The timer present the time lapsed;</p>
+        <p>3. The fuel counter show the remain fuel;</p>
+        <p>4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented in
+            the space;</p>
+        <p>5. You can shoot pressing Space Bar;</p>
+        <p>6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;</p>
+        <p>7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;</p>
+        <p>8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;</p>
+        <p>9. If you destroy a friendly spaceship, you lose 10 points;</p>
+        <p>10. During the flight, the spaceship needs to collect fuel in the space;</p>
+        <p>11. You can pause the game clicking in a button pause, or pressing the letter "p";</p>
+        <p>12. Go beyond all limits;</p>
+        <div class="btn startBtn">
+            Start Game
+            <div class="bubble pos-middle"></div>
+        </div>
+    </div>
+    <div class="game">
+        <div class="planets">
+            <img src="images/plant1.png" alt="planet" class="planet">
+            <img src="images/plant2.png" alt="planet" class="planet">
+            <img src="images/plant3.png" alt="planet" class="planet">
+            <img src="images/plant4.png" alt="planet" class="planet">
+            <img src="images/plant5.png" alt="planet" class="planet">
+        </div>
+        <div class="top-bar">
+            <div class="item">
+                <img src="images/logo-01.png" alt="logo" class="logo logo-second" width="120">
+            </div>
+            <div class="item">
+                <img src="images/time.png" alt="icon">
+                <span id="time">0</span>
+            </div>
+            <div class="item">
+                <img src="images/score.png" alt="icon">
+                <span id="score">0</span>
+            </div>
+            <div class="item fuelNum">
+                <img src="images/fuel.png" alt="icon">
+                <div class="progress">
+                    <div id="fuel">6</div>
+                </div>
+            </div>
+            <div class="item setting">
+                <img src="images/pause.png" alt="icon" class="play">
+                <img src="images/font_add.png" alt="" class="font-add">
+                <img src="images/font_reduce.png" alt="icon" class="font-reduce">
+                <img src="images/sound_on.png" alt="icon" class="sound">
+            </div>
+        </div>
+        <!-- game element -->
+        <div class="player"></div>
+        <!--
+            <div class="enemy"></div>
+            <div class="friend"></div>
+            <div class="mine_bullet"></div>
+            <div class="enemy_bullet"></div>
+            <div class="fuel"></div>
+            <div class="aestroid aestroid-1"></div>
+        -->
+    </div>
+    <div class="form">
+        <div class="pos-middle box">
+            <img src="images/logo-01.png" alt="" class="logo">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="button" value="Continue" id="continue" class="disabled">
+        </div>
+    </div>
+
+    <div class="rank">
+        <img src="images/logo-01.png" alt="" class="logo" width="120">
+        <table>
+            <tr>
+                <td>Position</td>
+                <td>Username</td>
+                <td>Score</td>
+                <td>Time</td>
+            </tr>
+
+        </table>
+        <div class="btn restart-game">Restart</div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

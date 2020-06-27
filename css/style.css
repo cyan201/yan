@@ -1,0 +1,454 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'pro';
+}
+
+img {
+    display: block;
+}
+
+@font-face {
+    src: url('../SourceSansPro-BlackItalic.ttf');
+    font-family: 'pro';
+}
+
+.pos-middle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: #ff4f19;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    margin: 15px auto 0;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+    transition: all 300ms;
+}
+
+.btn:hover {
+    background: #f19e0d;
+}
+
+.bubble {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.btn:hover .bubble {
+    animation: bubble 1s;
+}
+
+@keyframes bubble {
+    50% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 960px;
+    height: 600px;
+    overflow: hidden;
+    background: #222;
+}
+
+.container > * {
+    position: absolute;
+}
+
+.instruction {
+    width: 80%;
+    height: 80%;
+    padding: 5%;
+    box-shadow: 0 0 40px #ccc;
+    border-radius: 10px;
+    background: white;
+}
+
+.instruction p {
+    line-height: 32px;
+    animation: flyMove linear;
+}
+
+.instruction p:nth-of-type(1) {
+    animation-duration: 100ms;
+}
+
+.instruction p:nth-of-type(2) {
+    animation-duration: 200ms;
+}
+
+.instruction p:nth-of-type(3) {
+    animation-duration: 300ms;
+}
+
+.instruction p:nth-of-type(4) {
+    animation-duration: 400ms;
+}
+
+.instruction p:nth-of-type(5) {
+    animation-duration: 500ms;
+}
+
+.instruction p:nth-of-type(6) {
+    animation-duration: 600ms;
+}
+
+.instruction p:nth-of-type(7) {
+    animation-duration: 700ms;
+}
+
+.instruction p:nth-of-type(8) {
+    animation-duration: 800ms;
+}
+
+.instruction p:nth-of-type(9) {
+    animation-duration: 900ms;
+}
+
+.instruction p:nth-of-type(10) {
+    animation-duration: 1000ms;
+}
+
+.instruction p:nth-of-type(11) {
+    animation-duration: 1100ms;
+}
+
+.instruction p:nth-of-type(12) {
+    animation-duration: 1200ms;
+}
+
+@keyframes flyMove {
+    from {
+        transform: translate(-960px, -600px);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+.instruction h2 {
+    color: #ff4f19;
+}
+
+.logo-first {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.logo {
+    animation: logoAnimation 1s forwards;
+}
+
+@keyframes logoAnimation {
+    from {
+        transform: scale(4);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    background: url('../images/background-1.jpg');
+}
+
+.game > * {
+    position: absolute;
+}
+
+.planets {
+    left: 100%;
+    top: 80px;
+}
+
+.planet {
+    filter: grayscale(0.5);
+}
+
+.planets > img {
+    display: block;
+    margin-top: 15px;
+}
+
+.planet:nth-of-type(1) {
+    height: 40px;
+    animation: toLeft 14s linear infinite;
+
+}
+
+.planet:nth-of-type(2) {
+    height: 100px;
+    animation: toLeft 8s linear infinite;
+
+}
+
+.planet:nth-of-type(3) {
+    height: 120px;
+    animation: toLeft 6s linear infinite;
+
+}
+
+.planet:nth-of-type(4) {
+    height: 80px;
+    animation: toLeft 10s linear infinite;
+
+}
+
+.planet:nth-of-type(5) {
+    height: 60px;
+    animation: toLeft 12s linear infinite;
+
+}
+
+
+@keyframes toLeft {
+    to {
+        transform: translateX(-1200px);
+    }
+}
+
+
+.top-bar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.top-bar > * {
+    margin-left: 30px;
+}
+
+.top-bar .item {
+    position: relative;
+}
+
+.top-bar .item > span {
+    position: absolute;
+    left: 60%;
+    top: 0;
+    line-height: 50px;
+}
+
+.fuelNum {
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    width: 150px;
+    height: 30px;
+    background: white;
+    margin-left: 5px;
+    border-radius: 30px;
+
+}
+
+#fuel {
+    width: 75px;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 30px;
+    background: #ff4f19;
+    transition: all 500ms;
+}
+
+.setting {
+    display: flex;
+}
+
+.setting > img {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.player {
+    width: 142px;
+    height: 60px;
+    background: url('../images/player.png');
+    top: 50%;
+}
+
+.enemy {
+    width: 80px;
+    height: 80px;
+    background: url('../images/ship_1.png');
+    /*不能添加linear*/
+    animation: ship 1s steps(4) infinite, toLeft 8s linear forwards;
+    left: 80%;
+    top: 50%;
+}
+
+.friend {
+    width: 80px;
+    height: 80px;
+    background: url('../images/ship_2.png');
+    animation: ship 1s steps(4) infinite, toLeft 10s linear forwards;
+    left: 70%;
+    top: 30%;
+}
+
+@keyframes ship {
+    to {
+        background-position: -320px 0;
+    }
+}
+
+.mine_bullet {
+    width: 50px;
+    height: 10px;
+    background: url('../images/player-bullet.png');
+    left: 20%;
+    top: 50%;
+    animation: mineBullet 1s linear forwards;
+}
+
+@keyframes mineBullet {
+    to {
+        transform: translateX(1000px);
+    }
+}
+
+.enemy_bullet {
+    width: 50px;
+    height: 10px;
+    background: url('../images/enemy-bullet.png');
+    left: 70%;
+    top: 58%;
+    animation: enemyBullet 2s linear forwards;
+}
+
+@keyframes enemyBullet {
+    to {
+        transform: translateX(-1000px);
+    }
+}
+
+.aestroid {
+    width: 80px;
+    height: 80px;
+    left: 60%;
+    top: 80%;
+    background: url('../images/aestroid_1.png');
+    background-size: cover;
+
+    animation: aestroid 11s linear forwards;
+}
+
+@keyframes aestroid {
+    to {
+        transform: translateX(-1200px) rotate(720deg);
+    }
+}
+
+.fuel {
+    width: 50px;
+    height: 50px;
+    background: url('../images/fuel.png');
+    left: 50%;
+    top: 0;
+    animation: fuel 6s linear forwards;
+}
+
+@keyframes fuel {
+    to {
+        transform: translateY(600px) rotate(720deg);
+    }
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    display: none;
+}
+.form .box{
+    width: 50%;
+    height: 50%;
+}
+.form .box > *{
+    display: block;
+    margin: 20px auto 0;
+}
+#username {
+    border: none;
+    border-bottom: 2px solid white;
+    background: inherit;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+#continue {
+    width: 100px;
+    height: 40px;
+    background: #ff4f19;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+.rank {
+    width: 90%;
+    height: 90%;
+    padding: 5%;
+    background: #222;
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+table, td {
+    border: 1px solid white;
+}
+
+td {
+    height: 30px;
+}
+
+.restart-game {
+    margin-top: 30px;
+}
